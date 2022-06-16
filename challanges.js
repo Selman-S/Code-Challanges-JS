@@ -7,26 +7,26 @@
 // 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
 // 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
 
-const digits =493193;
-console.log(sum(16));
-console.log(sum(942));
-console.log(sum(132189));
-console.log(sum(493193));
+// const digits =493193;
+// console.log(sum(16));
+// console.log(sum(942));
+// console.log(sum(132189));
+// console.log(sum(493193));
 
-function sum(a){
-  let top=0 ;
-  let digit = a.toString();
-  for (let i = 0; i < digit.length; i++) {
-    top+= +digit[i]
-  }
+// function sum(a){
+//   let top=0 ;
+//   let digit = a.toString();
+//   for (let i = 0; i < digit.length; i++) {
+//     top+= +digit[i]
+//   }
     
-  if( top.toString().length > 1 ){
+//   if( top.toString().length > 1 ){
     
-   return sum(top);
-  }else {
-    return top
-  }
-}
+//    return sum(top);
+//   }else {
+//     return top
+//   }
+// }
 
 
 
@@ -43,26 +43,26 @@ function sum(a){
 // isValidWalk(['w','e','w','e','w','e','w','e','w','e','w','e']) => false
 
 
-console.log(isValidWalk(['n','s','n','s','n','s','n','s','n','s']));
-console.log(isValidWalk(['w']));
-console.log(isValidWalk(['n','n','n','s','n','s','n','s','n','s']));
-console.log(isValidWalk(['w','e','w','e','w','e','w','e','w','e','w','e']));
+// console.log(isValidWalk(['n','s','n','s','n','s','n','s','n','s']));
+// console.log(isValidWalk(['w']));
+// console.log(isValidWalk(['n','n','n','s','n','s','n','s','n','s']));
+// console.log(isValidWalk(['w','e','w','e','w','e','w','e','w','e','w','e']));
 
   
 
-function isValidWalk(yön){
-  if(yön.length !=10)return  false;
-  let dir = {'w':0, 'e':0,'s':0,'n':0};
+// function isValidWalk(yön){
+//   if(yön.length !=10)return  false;
+//   let dir = {'w':0, 'e':0,'s':0,'n':0};
   
-  for (let i = 0; i < yön.length; i++) {
-    dir[yön[i]]+=1;
-  }
-  if (dir['w']==dir['e'] && dir['s']==dir['n']) {
-        return true
-      }else{
-        return false
-      }
-} 
+//   for (let i = 0; i < yön.length; i++) {
+//     dir[yön[i]]+=1;
+//   }
+//   if (dir['w']==dir['e'] && dir['s']==dir['n']) {
+//         return true
+//       }else{
+//         return false
+//       }
+// } 
 
 
 
@@ -79,34 +79,55 @@ function isValidWalk(yön){
 
 
 
-console.log(findMissingLetter(['O','Q','R','S']));
-console.log(findMissingLetter(['a','b','c','d','f']));
-function findMissingLetter(x)
-{
-  const lenX = x.length;
-  let letter =x.map((i)=>i.charCodeAt())
-  let ilk = letter[0];
-  for (let i = letter[0]; i < letter[letter.length-1]; i++) {
-    if (!letter.includes(i)) {
-      return String.fromCharCode(i);
-    }
-  } 
-  return ' ';
-}
+// console.log(findMissingLetter(['O','Q','R','S']));
+// console.log(findMissingLetter(['a','b','c','d','f']));
+// function findMissingLetter(x)
+// {
+//   const lenX = x.length;
+//   let letter =x.map((i)=>i.charCodeAt())
+//   let ilk = letter[0];
+//   for (let i = letter[0]; i < letter[letter.length-1]; i++) {
+//     if (!letter.includes(i)) {
+//       return String.fromCharCode(i);
+//     }
+//   } 
+//   return ' ';
+// }
     
+
+// Create a function named divisors/Divisors that takes an integer n > 1 and returns an array with all of the integer's divisors(except for 1 and the number itself), from smallest to largest. If the number is prime return the string '(integer) is prime' 
+
+// Examples:
+// divisors(12); // should return [2,3,4,6]
+// divisors(25); // should return [5]
+// divisors(13); // should return "13 is prime"
+
+
+// function divisors(n) {
+//   let res =[]
+  
+//   for (let i = 2; i < n; i++) {
+//     if(n%i == 0){
+//       res.push(i)
+//     }
+//   }
+//   if(res.length == 0) return `${n} is prime`
+//   return res
+
+// }
 
 
 
-    
-    
-    
- 
+  
+// console.log(divisors(13));
+// console.log(divisors(4));
+// console.log(divisors(10));
+// console.log(divisors(20));
+// console.log(divisors(1250));
+
+
   
   
-
-
-
-
 
 
 
